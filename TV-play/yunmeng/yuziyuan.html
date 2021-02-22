@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <title>虞紫鸢</title>
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <!-- <link rel="stylesheet" href="../../css/normalize.css"> -->
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../css/personage-introduction.css">
+</head>
+
+<body>
+    <div id="app" style="background-color: rgba(230, 250, 228, 0.4);">
+        <div class="back">
+            <i class="el-icon-arrow-left" @click="goBack()"></i>
+            <span class="back-txt" style="font-size: 20px;">虞紫鸢</span>
+        </div>
+        <div class="block">
+            <el-carousel trigger="click" height="200px">
+                <el-carousel-item v-for="item in yuziyuanImgs" :key="item">
+                    <!-- <h3 class="small">{{ item }}</h3> -->
+                    <img :src="item" alt="" style="width: 100%; height: auto;">
+                </el-carousel-item>
+            </el-carousel>
+        </div>
+        <div class="content" style="background-color: rgba(230, 250, 228, 0.4);">
+            <div class="name">
+                <em>姓名：</em>
+                <p>虞紫鸢</p>
+            </div>
+            <div class="people">
+                <em>饰演者：</em>
+                <p>张净桐</p>
+            </div>
+            <div class="faqi">
+                <em>法器：</em>
+                <p>紫电（后被其子江澄继承）</p>
+            </div>
+            <div class="experience">
+                <em>角色经历：</em>
+                <P>云梦江氏主母，原家族为眉山虞氏，家中排名第三故称虞三娘子，号紫蜘蛛。</P>
+                <P>性格骄傲强势，不喜与人打交道。经眉山虞氏提出家族联姻后被拒，虞家对江枫眠多方施压，虽然江家和虞家势力半斤八两，但奈何虞家纠缠不休，江家不愿动武，两人最终成亲。婚后成为一对怨侣，常年夜猎在外，不理家务，不常留居莲花坞，其居所也与江枫眠分开，独占一带，只供她和她从虞家带过来的一批心腹家人居住。</P>
+                <P>与金夫人关系要好，为女儿江厌离与金夫人之子金子轩订下婚约。</P>
+                <P>对魏无羡颇为看不顺眼，常予责骂、鞭抽、罚跪祠堂，但未曾下过狠手。在与温家派来的侍女王灵娇发生争执时，为保江家，用法器紫电鞭打了魏无羡几十下，口中说能让魏无羡一个月也起不来，实际上没有到这种程度。</P>
+                <P>屠戮玄武事后一月，王灵娇趁江枫眠去往岐山温氏之际，奉命进入莲花坞，又以魏无羡开罪温晁为由，要求云梦江氏严惩魏无羡。虞夫人应允，而后王灵娇又宣布要将莲花坞设为温氏监察寮，又教训江澄几句，激怒虞夫人。</P>
+                <P>在虞夫人杀死其他温家修士，掌掴王灵娇之际，化丹手温逐流发觉状况前来救人，王灵娇趁机释放信号烟花引来温家大军。金珠银珠合击温逐流，虞夫人趁隙提起江澄与魏无羡冲上码头，用紫电将二人捆于船上，让二人往眉山逃命，要求魏无羡誓死保护江澄。</P>
+                <P>与亲儿作死别之语后，虞夫人返回莲花坞。江枫眠离开岐山回到云梦之际遇到被紫电绑住的江澄魏无羡，得知事态后，与江澄作诀别之语并嘱咐魏无羡好好护着江澄，而后赶回莲花坞，同惨遭杀害，云梦江氏一朝灭门。</P>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="../../js/lib/vue.js"></script>
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data() {
+            return {
+                tabPosition: 'left',
+                yuziyuanImgs: ['../img/yuziyuan/yuziyuan01.jpg', '../img/yuziyuan/yuziyuan02.jpg', '../img/yuziyuan/yuziyuan03.jpg', '../img/yuziyuan/yuziyuan04.jpg', '../img/yuziyuan/yuziyuan05.jpg']
+            };
+        },
+        methods: {
+            goBack: function() {
+                window.history.go(-1);
+            },
+        }
+    })
+</script>
+
+</html>

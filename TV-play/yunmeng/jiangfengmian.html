@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1, maximum-scale=1, user-scalable=no">
-    <title>虞紫鸢</title>
+    <title>江枫眠</title>
     <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
     <!-- <link rel="stylesheet" href="../../css/normalize.css"> -->
     <link rel="stylesheet" href="../../css/base.css">
@@ -15,38 +15,36 @@
     <div id="app" style="background-color: rgba(230, 250, 228, 0.4);">
         <div class="back">
             <i class="el-icon-arrow-left" @click="goBack()"></i>
-            <span class="back-txt" style="font-size: 20px;">虞紫鸢</span>
+            <span class="back-txt" style="font-size: 20px;">江枫眠</span>
         </div>
         <div class="block">
             <el-carousel trigger="click" height="200px">
-                <el-carousel-item v-for="item in 4" :key="item">
-                    <h3 class="small">{{ item }}</h3>
-                    <!-- <img :src="item" alt="" style="width: 100%; height: auto;"> -->
+                <el-carousel-item v-for="item in jiangfengmianImgs" :key="item">
+                    <!-- <h3 class="small">{{ item }}</h3> -->
+                    <img :src="item" alt="" style="width: 100%; height: auto;">
                 </el-carousel-item>
             </el-carousel>
         </div>
         <div class="content" style="background-color: rgba(230, 250, 228, 0.4);">
             <div class="name">
                 <em>姓名：</em>
-                <p>虞紫鸢</p>
+                <p>江枫眠</p>
             </div>
             <div class="people">
                 <em>饰演者：</em>
-                <p>宣璐</p>
+                <p>陆剑民</p>
             </div>
-            <div class="faqi">
+            <!-- <div class="faqi">
                 <em>法器：</em>
                 <p></p>
                 <p></p>
                 <p></p>
-            </div>
+            </div> -->
             <div class="experience">
                 <em>角色经历：</em>
-                <P></P>
-                <P></P>
-                <P></P>
-                <P></P>
-                <P></P>
+                <P>云梦江氏的前任家主，待人和蔼可亲。与魏无羡的父母为故交，在挚友故去后找到并收养了年仅九岁的魏无羡，对魏无羡青睐有加，其佩剑“随便”乃其所给予。</P>
+                <P>与虞紫鸢少年相识，性格不合，不想虞家突然提出联姻，江枫眠本已婉拒虞家结亲之意，但因虞家多方压迫，最终与虞紫鸢成婚，成为一对怨侣，常年分居。</P>
+                <P>在前往温氏索要弟子被缴走的佩剑时，温氏暗地派人前去江家与留在莲花坞的虞紫鸢发生冲突。江枫眠回江氏时本毫不知情，遇江澄魏无羡方知晓此事，告诉江澄要好好的，让魏无羡好好看顾江澄后，赶回莲花坞与众弟子并肩对敌，后因寡不敌众在被温逐流化去金丹后被害。</P>
                 <P></P>
             </div>
         </div>
@@ -61,7 +59,7 @@
         data() {
             return {
                 tabPosition: 'left',
-                jiangChengImgs: ['../img/jiangcheng/jiangcheng01.jpg', '../img/jiangcheng/jiangcheng02.jpg', '../img/jiangcheng/jiangcheng03.jpg', '../img/jiangcheng/jiangcheng04.jpg', '../img/jiangcheng/jiangcheng05.jpg']
+                jiangfengmianImgs: ['../img/jiangfengmian/jiangfengmian01.jpg', '../img/jiangfengmian/jiangfengmian02.jpg', '../img/jiangfengmian/jiangfengmian03.jpg', '../img/jiangfengmian/jiangfengmian04.jpg', '../img/jiangfengmian/jiangfengmian05.jpg']
             };
         },
         methods: {
