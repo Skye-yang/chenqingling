@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <title>蓝涣</title>
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <!-- <link rel="stylesheet" href="../../css/normalize.css"> -->
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../css/personage-introduction.css">
+</head>
+
+<body>
+    <div id="app" style="background-color: rgba(230, 250, 228, 0.4);">
+        <div class="back">
+            <i class="el-icon-arrow-left" @click="goBack()"></i>
+            <span class="back-txt" style="font-size: 20px;">蓝涣</span>
+        </div>
+        <div class="block">
+            <el-carousel trigger="click" height="200px">
+                <el-carousel-item v-for="item in lanhuanImgs" :key="item">
+                    <!-- <h3 class="small">{{ item }}</h3> -->
+                    <img :src="item" alt="" style="width: 100%; height: auto;">
+                </el-carousel-item>
+            </el-carousel>
+        </div>
+        <div class="content" style="background-color: rgba(230, 250, 228, 0.4);">
+            <div class="name">
+                <em>姓名：</em>
+                <p>蓝涣，字曦臣，号泽芜君</p>
+            </div>
+            <div class="people">
+                <em>饰演者：</em>
+                <p>刘海宽</p>
+            </div>
+            <div class="faqi">
+                <em>法器：</em>
+                <p>朔月 : 佩剑</p>
+                <p>裂冰 : 白玉洞箫</p>
+            </div>
+            <div class="experience">
+                <em>角色经历：</em>
+                <p>四大家族之一姑苏蓝氏现任宗主，含光君蓝忘机的兄长，二人并称“姑苏双璧”。品貌居世家公子榜榜首，清煦温雅，款款温柔。与蓝忘机有八九分相似，但与蓝忘机相比眸色较深，也常带笑容，为人随和。</p>
+                <p>十九岁时岐山温氏逼迫姑苏蓝氏自烧仙府，蓝曦臣携书卷出逃。后回到姑苏，重建仙府云深不知处，并招募门生参与射日之征。在射日之征后，与赤锋尊聂明玦、敛芳尊金光瑶结为兄弟，对二人的称呼分别是“大哥”、“三弟”或“阿瑶”。</p>
+                <p>十分疼爱弟弟蓝忘机，能看出蓝忘机心中所想。魏无羡重回于世在金麟台遭到金光瑶构陷后，收留藏匿了一同在逃的蓝忘机魏无羡二人，与魏无羡谈心，龙胆小筑告知其父母之事。</p>
+                <p>聂明玦和金光瑶关系长期不和，蓝曦臣从中调解，让金光瑶给聂明玦弹奏清心音减少刀灵怨气的影响，一开始弹的是清心音，后来金光瑶和聂明玦矛盾爆发到了顶端，利用清心音混合乱魄抄，导致聂明玦戾气加重，刀灵入体以至于狂暴发疯当众爆体而亡。</p>
+                <p>乱葬岗围剿十六年后，赤锋尊无头尸体被发现。金麟台魏无羡暴露身份又被金凌刺了一剑后收留忘羡二人，起初选择相信金光瑶，但确定《乱魄抄》一事为真后，及时采取了措施，修改了云深不知处的结界禁制。</p>
+                <p>随后金光瑶来到云深不知处，归还已经失效的通行玉令，蓝曦臣随其回到了金麟台，没过多久被打算远走东瀛的金光瑶锁住灵脉，又被挟持至云萍城观音庙。在庙中最后一战时，被聂怀桑设计，错手刺了金光瑶一剑。</p>
+                <p>而金光瑶临终前，引蓝曦臣靠近刚被封印住的棺木，本欲借已成凶尸的聂明玦同归于尽，但最后关头还是选择一把推开了蓝曦臣。</p>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="../../js/lib/vue.js"></script>
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data() {
+            return {
+                tabPosition: 'left',
+                lanhuanImgs: ['../img/lanhuan/lanhuan01.jpg', '../img/lanhuan/lanhuan02.jpg', '../img/lanhuan/lanhuan03.jpg', '../img/lanhuan/lanhuan04.jpg', '../img/lanhuan/lanhuan05.jpg']
+            };
+        },
+        methods: {
+            goBack: function() {
+                window.history.go(-1);
+            },
+        }
+    })
+</script>
+
+</html>

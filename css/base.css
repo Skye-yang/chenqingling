@@ -21,7 +21,8 @@
     background-color: #f5f7fa;
     box-shadow: 0 2px 4px rgba(0, 0, 0, .12);
     text-align: center;
-    position: relative;
+    position: fixed;
+    z-index: 999;
 }
 
 .back .el-icon-arrow-left {
@@ -45,6 +46,7 @@
 
 .block {
     margin: 4px 0px;
+    margin-top: 49px;
 }
 
 .el-carousel__button {

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <title>蓝湛</title>
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <!-- <link rel="stylesheet" href="../../css/normalize.css"> -->
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../css/personage-introduction.css">
+</head>
+
+<body>
+    <div id="app" style="background-color: rgba(230, 250, 228, 0.4);">
+        <div class="back">
+            <i class="el-icon-arrow-left" @click="goBack()"></i>
+            <span class="back-txt" style="font-size: 20px;">蓝湛</span>
+        </div>
+        <div class="block">
+            <el-carousel trigger="click" height="200px">
+                <el-carousel-item v-for="item in lanzhanImgs" :key="item">
+                    <!-- <h3 class="small">{{ item }}</h3> -->
+                    <img :src="item" alt="" style="width: 100%; height: auto;">
+                </el-carousel-item>
+            </el-carousel>
+        </div>
+        <div class="content" style="background-color: rgba(230, 250, 228, 0.4);">
+            <div class="name">
+                <em>姓名：</em>
+                <p>蓝湛，字忘机，号含光君</p>
+            </div>
+            <div class="people">
+                <em>饰演者：</em>
+                <p>王一博</p>
+            </div>
+            <div class="faqi">
+                <em>法器：</em>
+                <p>避尘 : 佩剑</p>
+                <p>忘机 : 檀香古琴</p>
+            </div>
+            <div class="experience">
+                <em>角色经历：</em>
+                <p>姑苏蓝氏二公子，外表清冷严肃、不苟言笑，内心正直内敛、严于律己，自少时便逢乱必出，唯他一人做到，极有佳名。蓝忘机为人雅正端方，不染尘埃，琴剑双修，博览书籍。十四岁起便被作为同辈子弟中的楷模，与其兄享有“姑苏双璧”美名，在蓝家掌罚，协理家事。</p>
+                <p>十五岁时，与魏无羡在云深不知处同窗初识，被魏无羡百般撩拨戏弄。一年后，两人于岐山温氏清谈会的射箭猎场重遇，因被魏无羡当众摘取抹额，提前离场，成绩却还能排名第四，实力不俗。</p>
+                <p>十七岁时，温氏以“清理门户、焕然重生”为由，逼迫蓝家烧毁云深不知处。父亲重伤，兄长携藏书失踪。蓝忘机因拒绝烧毁藏书阁，被围攻至断腿受伤。伤势未愈，又被送往岐山温氏同众世家弟子一起接受“教化”。</p>
+                <p>于玄武洞中，识出妖兽为屠戮玄武，以姑苏蓝氏秘技弦杀术与魏无羡合力将其斩杀。期间蓝忘机照顾生病的魏无羡，为其哼唱了《忘羡》一曲。被魏无羡问及曲名，蓝忘机回答，魏无羡却未听到。七天后被救出，并得知父亲去世消息，蓝忘机一人孤身返回云深不知处，肩负起家族重建的责任。</p>
+                <p>射日之征爆发后于驿站重遇魏无羡，结合之前怀疑和魏无羡表现，察觉魏无羡修习鬼道，因担心而进行劝说，并提出要对方同自己一起回云深不知处，但遭拒绝。</p>
+                <p>射日之征结束后，在百凤山围猎时发现魏无羡有失控征兆，再次前往云梦劝说，然不欢而散。清谈会时，直言澄清金光善对魏无羡的污蔑，并对仗义出言的绵绵郑重一礼。之后夷陵再遇，蓝忘机在乱葬岗察觉魏无羡灵力有异，再次询问其意愿并得到意料答复后，因尊重其选择，最终无奈放弃规劝。时逢云深不知处重建，家族重任，蓝忘机返回姑苏，二人前世至此分别。</p>
+                <p>至魏无羡血洗不夜天城，魏无羡掉落悬崖后，前去乱葬岗找寻。然而尸骨无存，只在树洞中发现了高烧昏迷的温苑，并将其带回云深不知处。</p>
+                <p>十六年后大梵山，莫玄羽献舍重生的魏无羡无意中吹出只有忘羡二人知晓的一曲《忘羡》，让蓝忘机认出了他。将其带回云深不知处，后与之结伴一起追查被分尸之人的身份。二人一路追查，抽丝剥茧拆穿阴谋，解开真相。</p>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="../../js/lib/vue.js"></script>
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data() {
+            return {
+                tabPosition: 'left',
+                lanzhanImgs: ['../img/lanzhan/lanzhan01.jpg', '../img/lanzhan/lanzhan02.jpg', '../img/lanzhan/lanzhan03.jpg', '../img/lanzhan/lanzhan04.jpg', '../img/lanzhan/lanzhan05.jpg']
+            };
+        },
+        methods: {
+            goBack: function() {
+                window.history.go(-1);
+            },
+        }
+    })
+</script>
+
+</html>
