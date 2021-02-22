@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <title>魏婴</title>
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <link rel="stylesheet" href="../../css/normalize.css">
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../css/personage-introduction.css">
+</head>
+
+<body>
+    <div id="app" style="background-color: rgba(230, 250, 228, 0.4);">
+        <div class="back">
+            <i class="el-icon-arrow-left" @click="goBack()"></i>
+            <span class="back-txt" style="font-size: 20px;">魏婴</span>
+        </div>
+        <div class="block">
+            <el-carousel trigger="click" height="200px">
+                <el-carousel-item v-for="item in weiYingImgs" :key="item">
+                    <!-- <h3 class="small">{{ item }}</h3> -->
+                    <img :src="item" alt="" style="width: 100%; height: auto;">
+                </el-carousel-item>
+            </el-carousel>
+        </div>
+        <div class="content" style="background-color: rgba(230, 250, 228, 0.4);">
+            <div class="name">
+                <em>姓名：</em>
+                <p>魏婴，字无羡，人称“夷陵老祖”</p>
+            </div>
+            <div class="people">
+                <em>饰演者：</em>
+                <p>肖战</p>
+            </div>
+            <div class="faqi">
+                <em>法器：</em>
+                <p>随便 : 正统仙剑，此剑有灵，陪少年魏无羡数十载，认主。魏无羡遭万鬼反噬身死后，随便自动封剑。除了魏无羡和得到魏无羡金丹的江澄外，无人能将其拔出。</p>
+                <p>陈情 : 有“鬼笛”之称，可操控万尸，一曲能使白骨生花。魏无羡贴身携带。但修鬼道不修仙，任千军万马，十方恶霸，九州奇侠，高岭之花，但凡化为一抔黄土，统统收归旗下，为夷陵老祖所用，供其驱策。</p>
+                <p>阴虎符 : 神兵利器，可召唤万千阴尸。由魏无羡用一把铁剑所炼化。威镇仙门，危险系数最高，难得出场，一出场便名震天下，单次使用杀伤力最强，具有唯一性。</p>
+            </div>
+            <div class="experience">
+                <em>角色经历：</em>
+                <p>父亲魏长泽（云梦江氏家臣），母亲藏色散人（抱山散人徒弟）。幼年时父母在夜猎中丧生，被父母故人、江氏家主江枫眠带回云梦江氏莲花坞，收为大弟子，与其女江厌离、其子江澄一同生活修习。</p>
+                <p>15岁，在姑苏蓝氏云深不知处听学三个月，结识蓝忘机。</p>
+                <p>16岁，参加岐山温氏清谈会，射箭比赛获得第一名。比赛过程中当众误扯下蓝忘机的抹额。</p>
+                <p>17岁，岐山温氏欺压仙家百族，强令众世家弟子前往岐山接受教化，魏无羡亦在其中。屠戮玄武洞中，众人因困于玄武洞，魏无羡为救众人以自身当诱饵引开妖兽，其他人先行离开，而魏无羡与蓝忘机一同被困洞中，两人合力杀死妖兽屠戮玄武。期间蓝忘机照顾受伤生病的魏无羡，为其哼唱了《忘羡》曲。</p>
+                <p>半月后，温氏派王灵娇找上江氏，令虞夫人鞭打魏无羡，砍去魏无羡右手、在莲花坞设立监察寮作为温氏据点。虞紫鸢拒绝，杀王灵娇未果。温氏借题发挥灭门江氏，虞紫鸢死前命魏无羡“死都要护着江澄”。</p>
+                <p>逃亡路程中，江澄被化去金丹，无法修习。魏无羡拜托温宁救出江澄。后在其姐温情帮助下，隐瞒江澄将自己的金丹剖予江澄。剖丹后魏无羡灵力尽失，被温晁等人抓住，打伤扔进乱葬岗。三月后魏无羡于乱葬岗归来，以一支鬼笛“陈情”驭鬼，在射日之征中，率众尸向温氏复仇。回到江家后，魏无羡因失金丹，再无法用剑，便借口年少轻狂不再佩剑。</p>
+                <p>20岁，百凤山围猎，魏无羡陈情一曲大出风头，遭来仙门各家的嫉妒与忌惮。为保护无辜的温氏残党和鬼将军误杀金子轩而受到仙门百家忌惮敌视，于不夜天遭百家围剿后坠崖。</p>
+                <p>十六年后，莫玄羽使用禁术献舍，魏无羡得以重生，重生后魏婴与苦寻自己十六年的蓝忘机结伴同行,追查莫家庄事件，于观音庙一战中知了不夜天的真相。</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="../../js/lib/vue.js"></script>
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data() {
+            return {
+                tabPosition: 'left',
+                weiYingImgs: ['../img/weiying/weiying01.jpg', '../img/weiying/weiying02.jpg', '../img/weiying/weiying03.jpg', '../img/weiying/weiying04.jpg', '../img/weiying/weiying05.jpg']
+            };
+        },
+        methods: {
+            goBack: function() {
+                window.history.go(-1);
+            },
+        }
+    })
+</script>
+
+</html>

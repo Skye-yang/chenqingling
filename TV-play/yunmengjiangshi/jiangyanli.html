@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <title>江厌离</title>
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <link rel="stylesheet" href="../../css/normalize.css">
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../css/personage-introduction.css">
+</head>
+
+<body>
+    <div id="app" style="background-color: rgba(230, 250, 228, 0.4);">
+        <div class="back">
+            <i class="el-icon-arrow-left" @click="goBack()"></i>
+            <span class="back-txt" style="font-size: 20px;">江厌离</span>
+        </div>
+        <div class="block">
+            <el-carousel trigger="click" height="200px">
+                <el-carousel-item v-for="item in jiangyanliImgs" :key="item">
+                    <!-- <h3 class="small">{{ item }}</h3> -->
+                    <img :src="item" alt="" style="width: 100%; height: auto;">
+                </el-carousel-item>
+            </el-carousel>
+        </div>
+        <div class="content" style="background-color: rgba(230, 250, 228, 0.4);">
+            <div class="name">
+                <em>姓名：</em>
+                <p>江厌离</p>
+            </div>
+            <div class="people">
+                <em>饰演者：</em>
+                <p>宣璐</p>
+            </div>
+            <!-- <div class="faqi">
+                <em>法器：</em>
+                <p></p>
+                <p></p>
+                <p></p>
+            </div> -->
+            <div class="experience">
+                <em>角色经历：</em>
+                <P>江厌离幼年时由母亲虞紫鸢做主与兰陵金氏时任宗主金光善嫡子金子轩订婚，暗恋金子轩，却为金子轩不喜。后随弟弟师弟于云深不知处求学，又遇金子轩，被金子轩羞辱，要求退婚，魏婴为师姐打抱不平，江厌离亲自将魏婴劝走。</P>
+                <P>射日之争时期，江厌离因自知修为不高，便没有上战场，而是做了后勤工作，一边为父母服丧，一边照顾伤员。因金子轩也在战场，江厌离暗中便做了汤给金子轩送去，没有让其知道，金子轩误会江厌离抢了别人的心血，又一次羞辱了江厌离，魏婴再次为师姐出头，误会解除。</P>
+                <P>因金夫人想让江厌离成为金家的儿媳，因而极力为金子轩和江厌离创造机会，让金子轩邀请江厌离参加狩猎，江厌离答应，同金夫人一道参与了百凤山围猎。就在百凤山，金子轩告白江厌离，也是在百凤山，魏婴被金子勋羞辱为“家仆之子”，江厌离挺身而出，以“他是我弟弟，不是外人”，也是为了帮助魏无羡，一语帮助师弟赢回尊严。</P>
+                <P>江厌离是江家待魏婴最好的人，却在师弟带领温氏族人于乱葬岗避难时不闻不问，只在成亲前夕才来看过一次魏婴，给魏婴看她的嫁衣，带了魏婴最爱吃的莲藕排骨汤，让他给自己未出生的孩子取字，并给了温宁一碗汤。</P>
+                <P>江厌离是魏婴第一世生命中重要的精神支柱，在魏婴心中有着很高地位。在魏婴于不夜天遭受围剿时，刚出月子和为夫戴孝的江厌离赶来寻找师弟，将正在屋顶与蓝湛对战的魏婴从高处叫下来，自己则在混战中被砍伤，江澄将姐姐抱在怀中，魏婴跪在师姐身前看望她，被她发现有人偷袭魏婴，一把将其推开，自己被一剑穿心而死。</P>
+                <P>江厌离之死是让魏无羡心灵崩溃，走向毁灭的关键。</P>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="../../js/lib/vue.js"></script>
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data() {
+            return {
+                tabPosition: 'left',
+                jiangyanliImgs: ['../img/jiangyanli/jiangyanli01.jpg', '../img/jiangyanli/jiangyanli02.jpg', '../img/jiangyanli/jiangyanli03.jpg', '../img/jiangyanli/jiangyanli04.jpg', '../img/jiangyanli/jiangyanli05.jpg']
+            };
+        },
+        methods: {
+            goBack: function() {
+                window.history.go(-1);
+            },
+        }
+    })
+</script>
+
+</html>

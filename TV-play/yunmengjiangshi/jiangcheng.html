@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <title>江澄</title>
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <link rel="stylesheet" href="../../css/normalize.css">
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../css/personage-introduction.css">
+</head>
+
+<body>
+    <div id="app" style="background-color: rgba(230, 250, 228, 0.4);">
+        <div class="back">
+            <i class="el-icon-arrow-left" @click="goBack()"></i>
+            <span class="back-txt" style="font-size: 20px;">江澄</span>
+        </div>
+        <div class="block">
+            <el-carousel trigger="click" height="200px">
+                <el-carousel-item v-for="item in jiangChengImgs" :key="item">
+                    <!-- <h3 class="small">{{ item }}</h3> -->
+                    <img :src="item" alt="" style="width: 100%; height: auto;">
+                </el-carousel-item>
+            </el-carousel>
+        </div>
+        <div class="content" style="background-color: rgba(230, 250, 228, 0.4);">
+            <div class="name">
+                <em>姓名：</em>
+                <p>江澄，字晚吟，人称“三毒圣手”</p>
+            </div>
+            <div class="people">
+                <em>饰演者：</em>
+                <p>汪卓成</p>
+            </div>
+            <div class="faqi">
+                <em>法器：</em>
+                <p>三毒</p>
+                <p>紫电：是一个可以化作戒指的武器，是母亲虞夫人在临死之前递给他的宝物，有着特殊的意义。</p>
+            </div>
+            <div class="experience">
+                <em>角色经历：</em>
+                <p>年少时因父亲带回魏无羡便与其相识，为魏无羡师弟。因魏无羡怕狗，被迫送走心爱的几只小奶狗，而同魏无羡置气将其赶出莲花坞。后魏无羡安慰其并答应保守秘密，于是江澄允诺今后一直为魏无羡赶狗，和解后二人成为挚友。</p>
+                <p>少年时期，同魏无羡一起摸鱼遛鸟，上房揭瓦，祸害四方。后和魏无羡同去云深不知处求学，应泽芜君蓝曦臣之邀，赴彩衣镇捉水鬼。</p>
+                <p>众人困于玄武洞时，在魏无羡掩护下只好与他人先行离开，奔途劳累七天找到山洞，终于救回魏无羡。</p>
+                <p>逃亡途中，江澄大受打击，魏无羡为其外出寻找食物，回途中遇温氏追兵，江澄为救魏无羡，现身吸引追兵注意力，后被岐山温氏走狗捉走，化去金丹，受戒鞭。魏无羡经温宁相助，救出江澄，魏无羡为了报答江家恩情，将自身金丹移植给江澄，并隐瞒了实情。</p>
+                <p>江澄康复后，凭一己之力重建莲花坞，扛起云梦江氏大旗，参加射日之征。因魏无羡庇护温氏后人，为天地所不容。江澄亲赴乱葬岗，因意见不同不赞同魏无羡为他报恩之举而挽留失败后，同魏无羡一战，无奈之下佯装与之决裂，对外宣称其叛出云梦江氏。</p>
+                <p>不夜天混战时，江澄亲眼目睹其姐江厌离为救魏无羡而死，悲愤之下江澄与魏无羡彻底决裂，抱着江厌离离去，之后与兰陵金氏围剿乱葬岗。</p>
+                <p>十六年后，江澄参与第二次乱葬岗围剿，后察觉真相，同各世家赴莲花坞共商大计。期间，同魏无羡和蓝忘机在江家祠堂起争执，后从温宁口中得知魏无羡换丹真相。</p>
+                <p>观音庙，就金丹之事，同魏无羡当面对质，心中愤怒而流泪。但无论金凌如何询问，江澄都没有说出当年的真相。</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="../../js/lib/vue.js"></script>
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data() {
+            return {
+                tabPosition: 'left',
+                jiangChengImgs: ['../img/jiangcheng/jiangcheng01.jpg', '../img/jiangcheng/jiangcheng02.jpg', '../img/jiangcheng/jiangcheng03.jpg', '../img/jiangcheng/jiangcheng04.jpg', '../img/jiangcheng/jiangcheng05.jpg']
+            };
+        },
+        methods: {
+            goBack: function() {
+                window.history.go(-1);
+            },
+        }
+    })
+</script>
+
+</html>

@@ -1,0 +1,92 @@
+.el-tabs__item {
+    height: 70px;
+    line-height: 70px;
+    font-size: 15px;
+}
+
+.el-tabs.el-tabs--left.el-tabs--border-card {
+    /* height: 1500px; */
+    color: #909399;
+}
+
+.el-tabs em {
+    font-size: 18px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.el-tabs em.jiahui {
+    margin-top: 10px;
+}
+
+.el-tabs em.bold {
+    font-weight: bold;
+}
+
+.el-tabs p {
+    font-size: 15px;
+    text-indent: 2em;
+}
+
+.el-tabs span {
+    display: block;
+    width: 192px;
+    height: 192px;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.el-tabs span.jiangshi {
+    background: url("../img/yunmeng.jpg");
+    background-size: 100% 100%;
+}
+
+.el-tabs span.lanshi {
+    background: url("../img/gusu.jpg");
+    background-size: 100% 100%;
+}
+
+.el-tabs span.jinshi {
+    background: url("../img/lanling.jpg");
+    background-size: 100% 100%;
+}
+
+.el-tabs span.nieshi {
+    background: url("../img/qinghe.jpg");
+    background-size: 100% 100%;
+}
+
+.el-tabs span.wenshi {
+    background: url("../img/qishan.jpg");
+    background-size: 100% 100%;
+}
+
+.el-tabs .el-tab-pane:nth-child(2),
+.el-tabs .el-tab-pane:nth-child(2) a {
+    color: #704282;
+}
+
+.el-tabs .el-tab-pane:nth-child(3),
+.el-tabs .el-tab-pane:nth-child(3) a {
+    color: #74cbde;
+}
+
+.el-tabs .el-tab-pane:nth-child(4),
+.el-tabs .el-tab-pane:nth-child(4) a {
+    color: #dfd166;
+}
+
+.el-tabs .el-tab-pane:nth-child(5),
+.el-tabs .el-tab-pane:nth-child(5) a {
+    color: #3a4072;
+}
+
+.el-tabs .el-tab-pane:nth-child(6),
+.el-tabs .el-tab-pane:nth-child(6) a {
+    color: #ea4949;
+}
+
+.el-tabs--border-card>.el-tabs__header .el-tabs__item.is-active {
+    background-color: rgba(230, 250, 228, 0.4);
+}

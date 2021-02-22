@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#app {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    font-size: 14px;
+    color: #e6e6e6;
+}
+
+
+/* 标题和返回按钮样式 */
+
+.back {
+    width: 100%;
+    height: 49px;
+    background-color: #f5f7fa;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .12);
+    text-align: center;
+    position: relative;
+}
+
+.back .el-icon-arrow-left {
+    position: absolute;
+    top: 35%;
+    left: 15px;
+    cursor: pointer;
+    color: #787474;
+    font-size: 20px;
+}
+
+.back .back-txt {
+    color: #787474;
+    font-size: 22x;
+    line-height: 49px;
+    font-weight: bold;
+}
+
+
+/* 轮播图样式 */
+
+.block {
+    margin: 4px 0px;
+}
+
+.el-carousel__button {
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+}
