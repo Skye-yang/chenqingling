@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <title>蓝启仁</title>
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <!-- <link rel="stylesheet" href="../../css/normalize.css"> -->
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../css/personage-introduction.css">
+</head>
+
+<body>
+    <div id="app" style="background-color: rgba(230, 250, 228, 0.4);">
+        <div class="back">
+            <i class="el-icon-arrow-left" @click="goBack()"></i>
+            <span class="back-txt" style="font-size: 20px;">蓝启仁</span>
+        </div>
+        <div class="block">
+            <el-carousel trigger="click" height="200px">
+                <el-carousel-item v-for="item in lanqirenImgs" :key="item">
+                    <!-- <h3 class="small">{{ item }}</h3> -->
+                    <img :src="item" alt="" style="width: 100%; height: auto;">
+                </el-carousel-item>
+            </el-carousel>
+        </div>
+        <div class="content" style="background-color: rgba(230, 250, 228, 0.4);">
+            <div class="name">
+                <em>姓名：</em>
+                <p>蓝启仁</p>
+            </div>
+            <div class="people">
+                <em>饰演者：</em>
+                <p>黄子腾</p>
+            </div>
+            <!-- <div class="faqi">
+                <em>法器：</em>
+                <p>避尘 : 佩剑</p>
+                <p>忘机 : 檀香古琴</p>
+            </div> -->
+            <div class="experience">
+                <em>角色经历：</em>
+                <p>蓝启仁既高且瘦，腰杆笔直，虽然蓄着长长的黑山羊须，但绝对不老也不丑，只可惜他周身一股迂腐死板之气。</p>
+                <p>是姑苏蓝氏的一位德高望重的老前辈，在兄长青蘅君闭关后接管族中事务。</p>
+                <p>在世家之中公认有三大特点：迂腐、固执、严师出高徒。</p>
+                <p>虽然前两点让许多人对他敬而远之，最后一个却又让他们削尖了脑袋地想把孩子送去他手下受教一番。</p>
+                <p>他手底下带出过不少优秀的蓝家子弟，在他堂上教养过一两年的，即便是进去的时候再无用，出来时一般也能人模狗样，至少仪表礼节远非从前可比，多少父母接回自己儿子时激动得老泪纵横。</p>
+                <p></p>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="../../js/lib/vue.js"></script>
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data() {
+            return {
+                tabPosition: 'left',
+                lanqirenImgs: ['../img/lanqiren/lanqiren01.jpg', '../img/lanqiren/lanqiren02.jpg', '../img/lanqiren/lanqiren03.jpg', '../img/lanqiren/lanqiren04.jpg', '../img/lanqiren/lanqiren05.jpg']
+            };
+        },
+        methods: {
+            goBack: function() {
+                window.history.go(-1);
+            },
+        }
+    })
+</script>
+
+</html>

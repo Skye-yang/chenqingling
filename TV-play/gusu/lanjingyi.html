@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <title>蓝景仪</title>
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <!-- <link rel="stylesheet" href="../../css/normalize.css"> -->
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../css/personage-introduction.css">
+</head>
+
+<body>
+    <div id="app" style="background-color: rgba(230, 250, 228, 0.4);">
+        <div class="back">
+            <i class="el-icon-arrow-left" @click="goBack()"></i>
+            <span class="back-txt" style="font-size: 20px;">蓝景仪</span>
+        </div>
+        <div class="block">
+            <el-carousel trigger="click" height="200px">
+                <el-carousel-item v-for="item in lanjingyiImgs" :key="item">
+                    <!-- <h3 class="small">{{ item }}</h3> -->
+                    <img :src="item" alt="" style="width: 100%; height: auto;">
+                </el-carousel-item>
+            </el-carousel>
+        </div>
+        <div class="content" style="background-color: rgba(230, 250, 228, 0.4);">
+            <div class="name">
+                <em>姓名：</em>
+                <p>蓝景仪</p>
+            </div>
+            <div class="people">
+                <em>饰演者：</em>
+                <p>郭丞</p>
+            </div>
+            <!-- <div class="faqi">
+                <em>法器：</em>
+                <p>避尘 : 佩剑</p>
+                <p>忘机 : 檀香古琴</p>
+            </div> -->
+            <div class="experience">
+                <em>角色经历：</em>
+                <p>蓝景仪其人，性格跳脱鲜明，直言快语，富有正义感。看上去虽然天不怕地不怕，但实际上胆子并不大（详见义城篇）。待人爽快，重情重义，单纯耿直。常因为一些小事而被罚抄家规。</p>
+                <p>开始与蓝思追一同出现于莫家庄，在对付鬼手时被魏无羡推了一下用衣袍上的符咒替蓝思追挡了一击，随后蓝忘机前来救场。义城篇与蓝思追、金凌等人一同出场。</p>
+                <p>不满金凌娇生惯养的性格称呼其为“大小姐”，后对其印象有改观。</p>
+                <p>蓝家四千多条家规束缚不了的男人，也是唯一一个在云深不知处乱跑还边喊着禁止疾行的男人。</p>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="../../js/lib/vue.js"></script>
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data() {
+            return {
+                tabPosition: 'left',
+                lanjingyiImgs: ['../img/lanjingyi/lanjingyi01.jpg', '../img/lanjingyi/lanjingyi02.jpg', '../img/lanjingyi/lanjingyi03.jpg', '../img/lanjingyi/lanjingyi04.jpg', '../img/lanjingyi/lanjingyi05.jpg']
+            };
+        },
+        methods: {
+            goBack: function() {
+                window.history.go(-1);
+            },
+        }
+    })
+</script>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <title>蓝愿</title>
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <!-- <link rel="stylesheet" href="../../css/normalize.css"> -->
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../css/personage-introduction.css">
+</head>
+
+<body>
+    <div id="app" style="background-color: rgba(230, 250, 228, 0.4);">
+        <div class="back">
+            <i class="el-icon-arrow-left" @click="goBack()"></i>
+            <span class="back-txt" style="font-size: 20px;">蓝愿</span>
+        </div>
+        <div class="block">
+            <el-carousel trigger="click" height="200px">
+                <el-carousel-item v-for="item in lanyuanImgs" :key="item">
+                    <!-- <h3 class="small">{{ item }}</h3> -->
+                    <img :src="item" alt="" style="width: 100%; height: auto;">
+                </el-carousel-item>
+            </el-carousel>
+        </div>
+        <div class="content" style="background-color: rgba(230, 250, 228, 0.4);">
+            <div class="name">
+                <em>姓名：</em>
+                <p>蓝愿，字思追</p>
+            </div>
+            <div class="people">
+                <em>饰演者：</em>
+                <p>郑繁星</p>
+            </div>
+            <!-- <div class="faqi">
+                <em>法器：</em>
+                <p>避尘 : 佩剑</p>
+                <p>忘机 : 檀香古琴</p>
+            </div> -->
+            <div class="experience">
+                <em>角色经历：</em>
+                <p>蓝愿，字思追，原名温苑，是温宁堂兄之子。斯文秀雅，仪表不俗。</p>
+                <p>因为思追小时候营养不良，长大了伙食又比较清淡，长得比较慢。虽然在姑苏长大，但是从四五岁起就严重晕船。</p>
+                <p>幼儿时期曾与魏无羡在乱葬岗一同生活过一段时间，各种被坑得不轻，例如种思追长出好多小朋友、吃魏无羡做的变态辣菜品等等，但是由于不夜天大战时发高烧被藏在洞里三天三夜，后来才被蓝忘机发现并带回蓝家，导致思追一直记不起童年的事情。一直由蓝忘机亲自教导，与蓝景仪公认并为蓝氏小辈之首。</p>
+                <p>重遇魏无羡后只觉得此人像极了含光君令人信服、安定，初时称其为“莫公子”，蓝忘机认出魏无羡后称其为“魏前辈”。下山历练时与蓝景仪、欧阳等人追着阿菁的引导与金凌相遇，随后一起追寻入义城。一行人遇到魏无羡与蓝忘机，由于有人中尸毒粉，由魏无羡带走寻找人家借地方做糯米粥解毒，顺便教导人情世故事宜。魏无羡爱辣，因此做出来的糯米粥辣得蓝思追喝了一口竟觉得“似曾相识”。</p>
+                <p>与长辈一行人分开后，被当作诱饵与一群小辈一起抓上乱葬岗外围，魏无羡与蓝忘机等人赶到后将一行人救出。在为魏无羡辩解时十分纯真地亲口承认“我知道魏前辈很穷”。魏无羡与蓝忘机将尸群引走后，蓝思追主动冲回去接应魏无羡。认识温宁后待他温和耐心，主动陪不被允许踏入莲花坞的温宁在外面聊天。</p>
+                <p>最终忆起童年往事，与温宁一起回岐山祭奠亲人。</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="../../js/lib/vue.js"></script>
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data() {
+            return {
+                tabPosition: 'left',
+                lanyuanImgs: ['../img/lanyuan/lanyuan01.jpg', '../img/lanyuan/lanyuan02.jpg', '../img/lanyuan/lanyuan03.jpg', '../img/lanyuan/lanyuan04.jpg', '../img/lanyuan/lanyuan05.jpg']
+            };
+        },
+        methods: {
+            goBack: function() {
+                window.history.go(-1);
+            },
+        }
+    })
+</script>
+
+</html>
