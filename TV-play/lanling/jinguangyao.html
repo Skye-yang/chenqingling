@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <title>金光瑶</title>
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <!-- <link rel="stylesheet" href="../../css/normalize.css"> -->
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../css/personage-introduction.css">
+</head>
+
+<body>
+    <div id="app" style="background-color: rgba(230, 250, 228, 0.4);">
+        <div class="back">
+            <i class="el-icon-arrow-left" @click="goBack()"></i>
+            <span class="back-txt" style="font-size: 20px;">金光瑶</span>
+        </div>
+        <div class="block">
+            <el-carousel trigger="click" height="200px">
+                <el-carousel-item v-for="item in lanyiImgs" :key="item">
+                    <!-- <h3 class="small">{{ item }}</h3> -->
+                    <img :src="item" alt="" style="width: 100%; height: auto;">
+                </el-carousel-item>
+            </el-carousel>
+        </div>
+        <div class="content" style="background-color: rgba(230, 250, 228, 0.4);">
+            <div class="name">
+                <em>姓名：</em>
+                <p>金光瑶，号敛芳尊</p>
+            </div>
+            <div class="people">
+                <em>饰演者：</em>
+                <p>朱赞锦</p>
+            </div>
+            <div class="faqi">
+                <em>法器：</em>
+                <p>恨生 : 佩剑</p>
+                <p>琴弦 : 暗器</p>
+            </div>
+            <div class="experience">
+                <em>角色经历：</em>
+                <p>原名孟瑶，性格隐忍，足智多谋，口齿伶俐。常以微笑示人，八面玲珑，自幼就多受羞辱与白眼。</p>
+                <p>其父为兰陵金氏家主金光善，花心好色，私生子女众多，人品极其恶劣；其母为云梦艺妓孟诗，长相清秀，饱读诗书，温柔有才华，非常痴情，却被金光善欺骗了一辈子。</p>
+                <p>与金子轩同一天出生，却有着天差地别的命运。拥有过目不忘的本领，被其母一手抚养长大，寄予厚望。因出身低贱终生饱受讥讽，小时候在青楼备受欺凌，因此长大后放火烧毁青楼。设计害死父亲时，留下得知真相的思思一命，因为思思曾经帮过他们母子，却也因此留下推翻自己的把柄，后来被聂怀桑利用思思揭穿真相。</p>
+                <p>从小备受凌辱，娼妓之子的身份带给他巨大伤害，但仍然很孝顺母亲。为了完成母亲夙愿，独自前往兰陵认父，却被父亲指使仆人一脚从高高的金麟台上踹下，撵走了他。</p>
+                <p>后投奔清河聂氏赤锋尊聂明玦门下效力，他效仿温家手法杀死欺压自己的金家修士后，被聂明玦发现，聂明玦逼他自首，他用苦肉计欺骗聂明玦后奔逃。逃走后，假意投入温家阵营，实则是卧底，为其余各家传递情报给蓝曦臣，成为温若寒亲信，在温若寒手下救出聂明玦并暗杀温若寒，推动射日之征的胜利，一战成名。</p>
+                <p>因在卧底时传递敌方情报和斩杀温若寒大功，被称为“敛芳尊”，金光善贪图他的功劳，借机认他回金家。与聂明玦、蓝曦臣义结金兰，排行第三，对二人的称呼为“大哥”、“二哥”。</p>
+                <p>认祖后改名金光瑶，为了得到金光善手下秦苍业的支持，而与其女秦愫成婚。却在大婚前夕被告知秦愫是其异母妹妹而五雷轰顶，但金光瑶早已经骑虎难下，如果悔婚被发觉真相，他会前途尽毁，无权无势拒婚会同时得罪金光善和秦苍业，而且也没有任何理由拒婚，并且秦愫已经怀孕，在种种因素下不得不继续成亲。因早就与秦愫圆房而育有一子金如松，儿子是个痴儿，担心婚姻真相败露而被迫杀死唯一的儿子。</p>
+                <p>在金光善死后成为兰陵金氏家主，被尊称为“仙督”。</p>
+                <p>在云萍城青楼旧址建观音庙，欲挖出母亲遗骨一起远渡东瀛，被蓝忘机斩断右手之后又被聂怀桑设计使其被蓝曦臣一剑穿胸。本欲借已成凶尸的聂明玦与蓝曦臣同归于尽，但终究不舍得伤害，又把蓝曦臣推开。最终与聂明玦同封于棺材中，永世不得超生。 </p>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="../../js/lib/vue.js"></script>
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data() {
+            return {
+                tabPosition: 'left',
+                lanyiImgs: ['../img/lanyi/lanyi01.jpg', '../img/lanyi/lanyi02.jpg', '../img/lanyi/lanyi03.jpg', '../img/lanyi/lanyi04.jpg', '../img/lanyi/lanyi05.jpg']
+            };
+        },
+        methods: {
+            goBack: function() {
+                window.history.go(-1);
+            },
+        }
+    })
+</script>
+
+</html>
